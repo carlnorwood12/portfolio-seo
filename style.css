@@ -1,0 +1,407 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000825;
+  filter: blur(0.4px);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "sfpro";
+  min-width: 344px;
+  cursor: cell;
+  /* Add position relative to body to correctly position the availability wrapper */
+  position: relative;
+}
+
+::selection {
+  background: #6a8dff;
+  color: #000d32;
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url(SFPRODISPLAYMEDIUM.OTF) format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.about {
+  padding: 50px 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+.shape-text {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 99999;
+}
+
+.swiper-project {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000825;
+  opacity: 0.85;
+  z-index: 999;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: #b4c6ff;
+  font-size: 18px;
+  font-weight: 500;
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(#000825, #000825) padding-box,
+    linear-gradient(to right, #6a8dff0f, #6a8dff33, #6a8dff0f) border-box;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  padding: 20px 30px;
+}
+
+header {
+  position: sticky;
+  top: 20px;
+  left: 0;
+  z-index: 9999999;
+}
+
+.circle-1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  color: rgba(180, 198, 255, 0.7);
+  font-size: 35px;
+  z-index: 9999;
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(25rem, 21.7226rem + 15.2439vw, 31.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid;
+  border-radius: 20px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, rgba(106, 141, 255, 0.2), transparent);
+  border-radius: inherit;
+  /* Removed background color here to reveal video */
+  background-color: transparent;
+}
+
+.mySwiper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(20deg, transparent, #00030e);
+}
+
+.top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(20deg, #000825, transparent);
+}
+.top
+{
+  position: relative;
+}
+
+.top #my-name {
+  position: relative;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(3.75rem, 2.7668rem + 4.5732vw, 5.625rem);
+  color: #6a8dff;
+  cursor: text;
+  z-index: 9999;
+  font-family: "Bebas Neue", sans-serif;
+  white-space: nowrap;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.bottom h1 {
+  margin-bottom: 20px;
+}
+
+.bottom p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(106, 141, 255, 0.75);
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  color: #6a8dff;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 10s linear infinite;
+  width: clamp(1.875rem, 1.2195rem + 3.0488vw, 3.125rem);
+}
+
+.swiper-project-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #b4c6ff;
+  font-size: clamp(1rem, 0.8689rem + 0.6098vw, 1.25rem);
+  z-index: 9999;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  filter: blur(1px);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  position: relative;
+  text-align: center;
+  aspect-ratio: 16/9;
+  max-width: 500px;
+  min-height: 250px;
+  width: 100%;
+  font-size: 18px;
+  border: 1px solid;
+  border-radius: 20px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(190deg, #6a8dff, #002290, #6a8dff);
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.button-submit {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #c2ceff;
+  color: #000825;
+  white-space: nowrap;
+  border: none;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 9999;
+  height: 45px;
+  width: 150px;
+  padding: 0 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  appearance: none;
+}
+
+.sonic-image {
+  position: absolute;
+  bottom: 0;
+  right: 20px; /* Adjusted to be inside the .top container, still on the right */
+  width: clamp(80px, 15vw, 150px); /* Responsive width for Sonic */
+  transition: transform 0.3s ease;
+  mix-blend-mode: luminosity;
+  z-index: 9998; /* Placed below my-name, but above video */
+}
+
+/* New CSS for Availability section */
+.availability-wrapper {
+  position: absolute; /* Use fixed to keep it in view regardless of scroll */
+  bottom: 20px; /* 20px from bottom */
+  right: 20px; /* 20px from right */
+  z-index: 100000; /* High z-index to ensure it's always on top */
+  display: flex;
+  justify-content: flex-end; /* Align content to the right within the wrapper */
+  align-items: flex-end; /* Align content to the bottom within the wrapper */
+  pointer-events: none; /* Allows clicks to pass through to elements behind it if needed */
+}
+
+.availability {
+  color: #c5ffc3; /* Match nav-links color for consistency */
+  padding: 12px 20px; /* More rectangular padding */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto; /* Re-enable pointer events for the badge itself */
+  background: linear-gradient(#000825, #000825) padding-box,
+    linear-gradient(to right, #6a8dff0f, rgba(111, 255, 106, 0.2), #6a8dff0f) border-box;
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+
+.availability-icon {
+  width: 25px; /* Adjust icon size */
+  height: 25px;
+  animation: pulse 1.5s infinite alternate; /* Pulsing animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.button-submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: url("button-gradient.svg") center center / cover no-repeat;
+  z-index: -1;
+}
+
+.button-submit:hover>svg {
+  transform: translate(2px, 0);
+  transition: transform 0.3s ease;
+}
+
+.button-submit>svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 450px) {
+  .button-submit {
+    background-color: transparent;
+    padding: 0 !important;
+    width: 120px !important;
+  }
+
+  .swiper-slide .swiper-project-title {
+    bottom: 70px;
+    height: max-content;
+    left: 20px;
+  }
+
+  .swiper-slide a .button-submit {
+    bottom: 15px;
+    left: 15px;
+    right: auto;
+  }
+}
+@media (max-width: 800px) {
+  .availability-wrapper {
+    display: none;
+  }
+}
