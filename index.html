@@ -20,7 +20,9 @@
          <nav class="navbar">
             <ul class="nav-links">
                <li><a href="index.html">Home</a></li>
-               <li><a href="pricing.html">Pricing</a></li>
+               <li><a href="pricing.html">Company</a></li>
+               <li><a href="blog.html">Blog</a></li>
+               <li><a href="contact.html">Contact</a></li>
             </ul>
          </nav>
       </header>
@@ -58,22 +60,10 @@
             </div>
          </section>
          <section class="bottom">
-            <div class="about" id="about">
-               <section class="about-section">
-                  <h1>About</h1>
-                  <p>As a passionate front-end developer based in Edinburgh, I specialize in building captivating and highly functional websites. Fresh from completing my HND at Edinburgh College, I'm dedicated to leveraging modern web technologies to create seamless user experiences. I thrive on continuous learning, pushing creative boundaries, and transforming complex ideas into elegant digital solutions.</p>
-               </section>
-               <section class="mission-values">
-                  <h1>Mission & Values</h1>
-                  <p>My work is driven by a commitment to excellence and a passion for impactful design and development:</p>
-                  <ul>
-                     <li>― Constantly exploring new technologies and creative solutions to deliver cutting-edge web experiences.</li>
-                     <li>― Delivering pixel-perfect, robust, and maintainable code that stands the test of time.</li>
-                     <li>― Working closely with clients to understand their vision and bring it to life through a transparent and iterative process.</li>
-                     <li>― Building trust through ethical practices, clear communication, and unwavering dedication to client success.</li>
-                  </ul>
-               </section>
-            </div>
+            <section class="about-section">
+               <h1>About</h1>
+               <p>As a passionate front-end developer based in Edinburgh, I specialize in building captivating and highly functional websites. Fresh from completing my HND at Edinburgh College, I'm dedicated to leveraging modern web technologies to create seamless user experiences. I thrive on continuous learning, pushing creative boundaries, and transforming complex ideas into elegant digital solutions.</p>
+            </section>
             <section class="projects">
                <h1>Projects</h1>
                <div class="swiper mySwiper">
@@ -234,21 +224,6 @@
          gsap.to(text.chars, {
            clipPath: "inset(0% 0 0% 0)",
            filter: "grayscale(0%)", // Remove the blur effect
-         });
-         // Animation for the tagline
-         gsap.from(".tagline", {
-             opacity: 0,
-             y: 20, // Start slightly below its final position
-             duration: 1,
-             ease: "power2.out",
-             delay: 1.8 // Delay slightly after name animation
-         });
-         gsap.from(".sonic-image", {
-           duration: 1.5,
-           opacity: 0,
-           y: 50, // Start 50px below its natural position
-           ease: "power3.out",
-           delay: 1.5, // Delay to sync with text animation
          });
       </script>
    </body>
