@@ -100,18 +100,18 @@ nav {
     linear-gradient(to right, #6a8dff0f, #6a8dff33, #6a8dff0f) border-box;
   border-radius: 50px;
   border: 1px solid transparent;
-  padding: 20px 30px;
+  padding: 30px;
 }
 
 header {
-  position: fixed; /* Changed from sticky to fixed */
-  top: 0; /* Ensures it's at the very top of the viewport */
+  position: sticky; /* Changed from sticky to fixed */
+  height: 0;
+  top: 20px; /* Ensures it's at the very top of the viewport */
   left: 0; /* Aligns to the left edge */
   width: 100%; /* Spans the full width */
   z-index: 9999999;
   display: flex;
   justify-content: center;
-  padding: 20px 0; /* Add some vertical padding to the header itself */
   background: #000825; /* Ensure a background so content doesn't show through */
 }
 
@@ -139,8 +139,6 @@ header {
   border-image-source: linear-gradient(90deg, rgba(106, 141, 255, 0.2), transparent);
   border-radius: 20px;
   background-color: transparent;
-  /* margin-top: 20px; */ /* REMOVED: This was pushing the content down */
-  padding-top: 80px; /* Add padding to .top to make space for the fixed header */
 }
 
 .mySwiper {
@@ -438,7 +436,6 @@ section h1 {
 }
 .story-item {
   padding: 25px 0;
-  margin-bottom: 25px;
   width: 100%;
 }
 

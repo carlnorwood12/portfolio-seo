@@ -61,5 +61,3 @@ Throughout the website, careful attention has been paid to copywriting principle
 * **Omit Unnecessary Words:** Text is written concisely, avoiding jargon and superfluous language to maintain clarity and efficiency in communication. Every word serves a purpose to maximize impact and reduce cognitive load on the reader.
 
 ---
-
-This `README.md` structure addresses all the points from your assignment. Remember to save this as `README.md` in your project's root directory.
