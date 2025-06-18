@@ -47,6 +47,19 @@ A separate page is dedicated to explaining the concept and importance of commerc
 
 ---
 
+### Content Pages
+
+Content pages can include blog posts, videos, articles, and other informational pieces that showcase your company’s knowledge and expertise in a particular industry. These contain useful insights for the customer and can include a call to action. Some helpful things to include in your content pages include:
+* Strong hook and concise title.
+* Quality images and visuals such as graphs and data.
+* Informative and educational content (you might benefit from using AI).
+* Links to external authoritative sources.
+* Internal links to other pages on your site.
+* SEO keywords.
+* Social media sharing links.
+
+---
+
 ## Copywriting and Readability (Outcome 4)
 
 Throughout the website, careful attention has been paid to copywriting principles to ensure content is easy to read, digestible, and effective in conveying its message.
@@ -54,7 +67,7 @@ Throughout the website, careful attention has been paid to copywriting principle
 **Key copywriting strategies applied:**
 
 * **Plenty of Headings:** The liberal use of `<h1>`, `<h2>`, and `<h3>` tags (`section-heading`, `story-item h3`, etc.) breaks down content into manageable, scannable chunks. Headings act as informal outlines, allowing users to quickly grasp the topic of each section before deciding to read further.
-* **Bullet Points:** Information that benefits from quick scanning and clear distinction (like "Mission & Values" and "Key Elements for Conversion") is presented using bullet points (`<ul><li>`) to improve readability and retention.
+* **Bullet Points:** Information that benefits from quick scanning and clear distinction (like "Mission & Values" and "Key Elements for Conversion") is presented using bullet points (`<ul><li>`) to improve readability and and retention.
 * **Short Paragraphs:** Long blocks of text are avoided. Content is broken into shorter paragraphs, making information easier to digest and less intimidating to read.
 * **Frontloaded Important Information:** Key messages and core benefits are placed at the beginning of paragraphs or sections to ensure the most important information is absorbed first, even by users who skim.
 * **Calling Attention to Key Terms and Phrases:** Important terms and metrics (e.g., "**40% increase**," "**$50,000**," "**24% conversion boost**") are highlighted using `<strong>` tags, drawing the reader's eye to critical information and reinforcing the main points.
