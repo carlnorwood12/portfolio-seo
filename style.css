@@ -9,6 +9,7 @@ body {
   min-width: 344px;
   cursor: cell;
   position: relative;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -42,7 +43,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 20px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -307,7 +308,11 @@ video {
   align-items: flex-end;
   pointer-events: none;
 }
-
+@media (max-width: 768px) {
+  .availability-wrapper {
+    display: none;
+  }
+}
 .availability {
   color: #c5ffc3;
   padding: 12px 20px;

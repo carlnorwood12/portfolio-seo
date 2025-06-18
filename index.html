@@ -23,14 +23,14 @@
          <nav class="navbar">
             <ul class="nav-links">
                <li><a href="index.html">Home</a></li>
-               <li><a href="pricing.html">Company</a></li>
+               <li><a href="company.html">Company</a></li>
                <li><a href="blog.html">Blog</a></li>
                <li><a href="contact.html">Contact</a></li>
             </ul>
          </nav>
       </header>
          <section class="top">
-            <div class="me-1" data-cursor="-md" data-cursor-img="carl.webp">Edinburgh College</div>
+            <div class="me-1" data-cursor="-md" data-cursor-img="carl.webp"></div>
             <video class="background-video" autoplay muted>
                <source src="grid.webm" type="video/webm">
                Your browser does not support the video tag.
@@ -200,9 +200,12 @@
     <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
     <script>
 var cursor = new MouseFollower({
-    skew: false, // Set skew to false to disable the effect
-    ease: 1, // Adjust the ease for smoother movement
-  });    </script>
+   speed: 3,
+    ease: 'expo.out',
+    overwrite: true,
+    skewingMedia: 0,
+  });    
+  </script>
       <script>
          const text = new SplitType("#my-name", {
            type: "chars"
