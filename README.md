@@ -19,7 +19,17 @@
 **I've added the following key sections:**
 
 * **Compelling Headline:** A clear, concise heading to immediately convey their purpose and value proposition.
-* **Testimonials or Customer Reviews:** A dedicated Testimonials section with feedback
+* **Testimonials or Customer Reviews:** A dedicated Testimonials section with feedback.
+
+---
+
+### Content Pages (`blog.html`)
+
+**I've added the following key sections:**
+
+* **Informative Introduction:** An introductory section ("Your Source for Digital Insights") clearly outlining the blog's purpose and the type of content offered (articles, analyses, tips on digital marketing, SEO, content creation, online growth).
+* **Articles & Resources:** A dedicated section displaying individual articles with compelling headlines and brief descriptions, each providing useful insights and a clear "Read Article" link.
+* **Navigation Tabs/Links:** Consistent header navigation providing access to other main sections of the website.
 
 ---
 
