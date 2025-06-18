@@ -2,6 +2,12 @@
 
 ## Website Architecture (Outcome 3)
 
+### General (`index.html`)
+
+**I've added the following key sections:**
+
+* **Comments:** Code comments throughout all HTML files
+
 ### Homepage (`index.html`)
 
 **I've added the following key sections:**
