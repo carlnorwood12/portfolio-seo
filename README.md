@@ -20,6 +20,7 @@
 
 * **Compelling Headline:** A clear, concise heading to immediately convey their purpose and value proposition.
 * **Testimonials or Customer Reviews:** A dedicated Testimonials section with feedback.
+* **Navigation Tabs/Links:** Consistent header navigation providing access to other main sections of the website.
 
 ---
 
