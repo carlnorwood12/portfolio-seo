@@ -29,9 +29,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.about {
-  padding: 50px 0;
-}
 
 .swiper {
   width: 100%;
@@ -367,9 +364,24 @@ main {
 }
 section:not(.bottom)
 {
-  padding: 30px 0;
+  padding: 30px 10px;
+}
+section:not(footer)
+{
+  padding: 30px 10px;
 }
 
+footer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  color: #b4c6ff;
+  text-align: center;
+  font-size: 14px;
+}
 section:not(.top) h1 {
   font-size: 24px;
   margin-bottom: 20px;
