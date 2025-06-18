@@ -3,15 +3,12 @@ body {
   background: #000825;
   filter: blur(0.4px);
   margin: 0;
-  height: 100vh;
+  min-height: 100vh; /* Use min-height to allow content to expand */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Changed to column to stack header, main */
   font-family: "sfpro";
   min-width: 344px;
   cursor: cell;
-  /* Add position relative to body to correctly position the availability wrapper */
   position: relative;
 }
 
@@ -107,10 +104,15 @@ nav {
 }
 
 header {
-  position: sticky;
-  top: 20px;
-  left: 0;
+  position: fixed; /* Changed from sticky to fixed */
+  top: 0; /* Ensures it's at the very top of the viewport */
+  left: 0; /* Aligns to the left edge */
+  width: 100%; /* Spans the full width */
   z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; /* Add some vertical padding to the header itself */
+  background: #000825; /* Ensure a background so content doesn't show through */
 }
 
 .circle-1 {
@@ -126,19 +128,19 @@ header {
 .top {
   position: relative;
   width: 100%;
-  height: 100%;
   min-height: clamp(25rem, 21.7226rem + 15.2439vw, 31.25rem);
+  max-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border-bottom: 1px solid;
-  border-radius: 20px;
   border-image-slice: 1;
   border-image-source: linear-gradient(90deg, rgba(106, 141, 255, 0.2), transparent);
-  border-radius: inherit;
-  /* Removed background color here to reveal video */
+  border-radius: 20px;
   background-color: transparent;
+  /* margin-top: 20px; */ /* REMOVED: This was pushing the content down */
+  padding-top: 80px; /* Add padding to .top to make space for the fixed header */
 }
 
 .mySwiper {
@@ -166,10 +168,6 @@ header {
   height: 100%;
   background: linear-gradient(20deg, #000825, transparent);
 }
-.top
-{
-  position: relative;
-}
 
 .top #my-name {
   position: relative;
@@ -193,8 +191,11 @@ video {
   z-index: -1;
 }
 
-.bottom h1 {
+/* Original styling for .bottom h1, now applied to .section-heading for consistency */
+.section-heading {
   margin-bottom: 20px;
+  font-size: clamp(2.2rem, 1.8rem + 2vw, 2.8rem); /* Adjusted for consistency */
+  padding-top: 30px; /* Add padding similar to .about */
 }
 
 .bottom p {
@@ -275,9 +276,9 @@ video {
 }
 
 .button-submit {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+  position: absolute; /* This will be overridden for the contact button */
+  bottom: 15px; /* This will be overridden for the contact button */
+  right: 15px; /* This will be overridden for the contact button */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +286,7 @@ video {
   font-family: inherit;
   font-size: 15px;
   font-weight: 700;
-  background-color: #c2ceff;
+  background-color: #6a8dff;
   color: #000825;
   white-space: nowrap;
   border: none;
@@ -316,25 +317,25 @@ video {
 
 /* New CSS for Availability section */
 .availability-wrapper {
-  position: absolute; /* Use fixed to keep it in view regardless of scroll */
-  bottom: 20px; /* 20px from bottom */
-  right: 20px; /* 20px from right */
-  z-index: 100000; /* High z-index to ensure it's always on top */
+  position: absolute; /* Changed to absolute, relative to .top */
+  bottom: 20px;
+  right: 20px;
+  z-index: 100000;
   display: flex;
-  justify-content: flex-end; /* Align content to the right within the wrapper */
-  align-items: flex-end; /* Align content to the bottom within the wrapper */
-  pointer-events: none; /* Allows clicks to pass through to elements behind it if needed */
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
 }
 
 .availability {
-  color: #c5ffc3; /* Match nav-links color for consistency */
-  padding: 12px 20px; /* More rectangular padding */
-  border-radius: 50px; /* Rounded corners */
+  color: #c5ffc3;
+  padding: 12px 20px;
+  border-radius: 50px;
   font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  pointer-events: auto; /* Re-enable pointer events for the badge itself */
+  pointer-events: auto;
   background: linear-gradient(#000825, #000825) padding-box,
     linear-gradient(to right, #6a8dff0f, rgba(111, 255, 106, 0.2), #6a8dff0f) border-box;
   border-radius: 50px;
@@ -342,9 +343,9 @@ video {
 }
 
 .availability-icon {
-  width: 25px; /* Adjust icon size */
+  width: 25px;
   height: 25px;
-  animation: pulse 1.5s infinite alternate; /* Pulsing animation */
+  animation: pulse 1.5s infinite alternate;
 }
 
 @keyframes pulse {
@@ -356,18 +357,6 @@ video {
     transform: scale(1.1);
     opacity: 1;
   }
-}
-
-.button-submit::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: url("button-gradient.svg") center center / cover no-repeat;
-  z-index: -1;
 }
 
 .button-submit:hover>svg {
@@ -404,4 +393,149 @@ video {
   .availability-wrapper {
     display: none;
   }
+}
+
+/* Added for proper main content flow */
+main {
+  flex-grow: 1; /* Allows main to take up available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  width: 100%; /* Ensure main takes full width */
+  padding: 0 20px; /* Add some horizontal padding */
+}
+section:not(.bottom)
+{
+  padding: 20px 0;
+}
+
+section h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.mission-values ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin-top: 15px;
+}
+
+.mission-values ul li {
+  margin-bottom: 10px;
+  color: rgba(106, 141, 255, 0.9); /* Slightly more opaque for readability */
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.mission-values ul li strong {
+  color: #6a8dff; /* Highlight keywords */
+}
+
+/* --- New Success Stories Section --- */
+.success-stories {
+  width: 100%;
+  color: #6a8dff;
+}
+.story-item {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.story-item h3 {
+  color: #b4c6ffe6;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.story-item p {
+  color: rgba(106, 141, 255, 0.85);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+/* --- New Contact Section --- */
+.contact-section {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  width: 100%;
+  color: #6a8dff;
+  margin-top: 40px;
+  border-top: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, rgba(106, 141, 255, 0.2), transparent);
+  /* The section itself is still centered by main's align-items: center; */
+  /* Remove text-align: center; from here if you want content within to align left by default */
+  text-align: left; /* Changed to left to align content within to the left */
+}
+
+.contact-button {
+  min-width: 180px; /* Ensure buttons have a minimum width */
+  padding: 15px 30px;
+  font-size: 16px;
+  /* Remove position: absolute; and bottom/right from here for the contact button */
+  position: static; /* Make it flow normally within its parent */
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+
+.contact-button-wrapper {
+  margin-top: 20px; /* Add some space above the button */
+}
+
+
+/* Partnerships Section Styling */
+.partnerships-section {
+  width: 100%;
+  color: #6a8dff;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Space between partner logos */
+  margin-top: 30px;
+}
+
+.partner-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.partner-logo img {
+  max-width: 120px; /* Adjust as needed */
+  height: 120px;
+  background-color: #6a8dff0f;
+  border-radius: 50%;
+  padding: 20px;
+  filter: grayscale(100%) brightness(150%); /* Example: make logos monochromatic */
+  transition: filter 0.3s ease;
+}
+
+.partner-logo img:hover {
+  filter: grayscale(0%) brightness(100%); /* Color on hover */
+}
+
+.partner-logo p {
+  font-size: 16px;
+  color: #b4c6ffe6;
+}
+
+.partnerships-note {
+  font-size: 14px;
+  color: rgba(106, 141, 255, 0.6);
+  margin-top: 40px;
+}
+
+/* Container for consistent content width and centering */
+.container {
+  max-width: 1200px; /* Or whatever max-width you prefer */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add horizontal padding inside the container */
+  width: 100%; /* Ensure it takes full width within its parent */
 }
