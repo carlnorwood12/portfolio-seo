@@ -129,20 +129,10 @@
            clipPath: "inset(0% 0 0% 0)",
            filter: "grayscale(0%)", // Remove the blur effect
          });
-         // Animation for the tagline
-         gsap.from(".tagline", {
-             opacity: 0,
-             y: 20, // Start slightly below its final position
-             duration: 1,
-             ease: "power2.out",
-             delay: 1.8 // Delay slightly after name animation
-         });
-         gsap.from(".sonic-image", {
-           duration: 1.5,
-           opacity: 0,
-           y: 50, // Start 50px below its natural position
-           ease: "power3.out",
-           delay: 1.5, // Delay to sync with text animation
+
+         gsap.from(".top", {
+           duration: 2,
+           filter: "grayscale(100%) blur(5px)", // Start with a blur effect
          });
       </script>
    </body>

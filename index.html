@@ -211,7 +211,6 @@ var cursor = new MouseFollower({
            type: "chars"
          });
          gsap.from(text.chars, {
-           // Start with text fully clipped from the bottom, effectively hiding it
            clipPath: "inset(100% 0 0% 0)",
            filter: "grayscale(100%)", // Start with a blur effect
            opacity: 0,
@@ -223,6 +222,10 @@ var cursor = new MouseFollower({
          gsap.to(text.chars, {
            clipPath: "inset(0% 0 0% 0)",
            filter: "grayscale(0%)", // Remove the blur effect
+         });
+         gsap.from(".top", {
+           duration: 2,
+           filter: "grayscale(100%) blur(5px)", // Start with a blur effect
          });
       </script>
    </body>

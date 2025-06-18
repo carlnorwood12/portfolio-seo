@@ -370,7 +370,7 @@ section:not(.bottom)
   padding: 30px 0;
 }
 
-section h1 {
+section:not(.top) h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
