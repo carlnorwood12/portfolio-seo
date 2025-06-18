@@ -284,16 +284,6 @@ video {
   appearance: none;
 }
 
-.sonic-image {
-  position: absolute;
-  bottom: 0;
-  right: 20px; /* Adjusted to be inside the .top container, still on the right */
-  width: clamp(80px, 15vw, 150px); /* Responsive width for Sonic */
-  transition: transform 0.3s ease;
-  mix-blend-mode: luminosity;
-  z-index: 9998; /* Placed below my-name, but above video */
-}
-
 /* New CSS for Availability section */
 .availability-wrapper {
   position: absolute; /* Changed to absolute, relative to .top */
@@ -325,12 +315,6 @@ video {
   border: 1px solid transparent;
 }
 
-.availability-icon {
-  width: 25px;
-  height: 25px;
-  animation: pulse 1.5s infinite alternate;
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -355,13 +339,6 @@ video {
 
 
 /* Added for proper main content flow */
-main {
-  flex-grow: 1; /* Allows main to take up available space */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  width: 100%; /* Ensure main takes full width */
-}
 section:not(.bottom)
 {
   padding: 30px 10px;
@@ -385,23 +362,6 @@ footer
 section:not(.top) h1 {
   font-size: 24px;
   margin-bottom: 20px;
-}
-
-.mission-values ul {
-  list-style: none; /* Remove default bullet points */
-  padding: 0;
-  margin-top: 15px;
-}
-
-.mission-values ul li {
-  margin-bottom: 10px;
-  color: rgba(106, 141, 255, 0.9); /* Slightly more opaque for readability */
-  font-size: 17px;
-  line-height: 1.4;
-}
-
-.mission-values ul li strong {
-  color: #6a8dff; /* Highlight keywords */
 }
 
 /* --- New Success Stories Section --- */
@@ -433,36 +393,6 @@ section:not(.top) h1 {
 }
 
 /* --- New Contact Section --- */
-.contact-section {
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  width: 100%;
-  color: #6a8dff;
-  margin-top: 40px;
-  border-top: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, rgba(106, 141, 255, 0.2), transparent);
-  /* The section itself is still centered by main's align-items: center; */
-  /* Remove text-align: center; from here if you want content within to align left by default */
-  text-align: left; /* Changed to left to align content within to the left */
-}
-
-.contact-button {
-  min-width: 180px; /* Ensure buttons have a minimum width */
-  padding: 15px 30px;
-  font-size: 16px;
-  /* Remove position: absolute; and bottom/right from here for the contact button */
-  position: static; /* Make it flow normally within its parent */
-  left: auto;
-  bottom: auto;
-  right: auto;
-}
-
-.contact-button-wrapper {
-  margin-top: 20px; /* Add some space above the button */
-}
 
 
 /* Partnerships Section Styling */
@@ -504,16 +434,4 @@ section:not(.top) h1 {
   color: #b4c6ffe6;
 }
 
-.partnerships-note {
-  font-size: 14px;
-  color: rgba(106, 141, 255, 0.6);
-  margin-top: 40px;
-}
-
 /* Container for consistent content width and centering */
-.container {
-  max-width: 1200px; /* Or whatever max-width you prefer */
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Add horizontal padding inside the container */
-  width: 100%; /* Ensure it takes full width within its parent */
-}
