@@ -2,9 +2,9 @@ body {
   font-family: Arial, sans-serif;
   background: #000619;
   margin: 0;
-  min-height: 100vh; /* Use min-height to allow content to expand */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Changed to column to stack header, main */
+  flex-direction: column;
   font-family: "sfpro";
   min-width: 344px;
   cursor: cell;
@@ -100,15 +100,15 @@ nav {
 }
 
 header {
-  position: sticky; /* Changed from sticky to fixed */
+  position: sticky;
   height: 0;
-  top: 20px; /* Ensures it's at the very top of the viewport */
-  left: 0; /* Aligns to the left edge */
-  width: 100%; /* Spans the full width */
+  top: 20px;
+  left: 0;
+  width: 100%;
   z-index: 9999999;
   display: flex;
   justify-content: center;
-  background: #000825; /* Ensure a background so content doesn't show through */
+  background: #000825;
 }
 
 .circle-1 {
@@ -255,9 +255,9 @@ video {
 }
 
 .button-submit {
-  position: absolute; /* This will be overridden for the contact button */
-  bottom: 15px; /* This will be overridden for the contact button */
-  right: 15px; /* This will be overridden for the contact button */
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -284,9 +284,8 @@ video {
   appearance: none;
 }
 
-/* New CSS for Availability section */
 .availability-wrapper {
-  position: absolute; /* Changed to absolute, relative to .top */
+  position: absolute;
   bottom: 20px;
   right: 20px;
   z-index: 100000;
@@ -338,7 +337,6 @@ video {
 }
 
 
-/* Added for proper main content flow */
 section:not(.bottom)
 {
   padding: 30px 10px;
@@ -364,7 +362,6 @@ section:not(.top) h1 {
   margin-bottom: 20px;
 }
 
-/* --- New Success Stories Section --- */
 .success-stories {
   width: 100%;
   color: #6a8dff;
@@ -392,10 +389,7 @@ section:not(.top) h1 {
   width: 100%;
 }
 
-/* --- New Contact Section --- */
 
-
-/* Partnerships Section Styling */
 .partnerships-section {
   width: 100%;
   color: #6a8dff;
@@ -404,7 +398,7 @@ section:not(.top) h1 {
 .partners-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px; /* Space between partner logos */
+  gap: 40px;
   margin-top: 30px;
 }
 
@@ -416,22 +410,20 @@ section:not(.top) h1 {
 }
 
 .partner-logo img {
-  max-width: 120px; /* Adjust as needed */
+  max-width: 120px;
   height: 120px;
   background-color: #6a8dff0f;
   border-radius: 50%;
   padding: 20px;
-  filter: grayscale(100%) brightness(150%); /* Example: make logos monochromatic */
+  filter: grayscale(100%) brightness(150%);
   transition: filter 0.3s ease;
 }
 
 .partner-logo img:hover {
-  filter: grayscale(0%) brightness(100%); /* Color on hover */
+  filter: grayscale(0%) brightness(100%);
 }
 
 .partner-logo p {
   font-size: 16px;
   color: #b4c6ffe6;
 }
-
-/* Container for consistent content width and centering */

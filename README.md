@@ -1,8 +1,4 @@
-# Carl Norwood - Front-End Developer Portfolio & Commercial Pages Showcase
-
-This README.md file outlines the architecture of this website, focusing on the structure of its homepage and commercial pages, as well as the copywriting principles applied for optimal readability and conversion.
-
----
+# Outcome 3 & 4
 
 ## Website Architecture (Outcome 3)
 
