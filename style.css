@@ -408,6 +408,12 @@ section h1 {
   line-height: 1.6;
   font-size: 17px;
 }
+.me-1
+{
+  z-index: 9999;
+  height: 500px;
+  width: 100%;
+}
 
 /* --- New Contact Section --- */
 .contact-section {

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😎</text></svg>" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Wassup! I have over 5+ years of experience in web development based in Edinburgh specializing in creative solutions for any project. Currently studying at Edinburgh College, let’s collaborate!" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="cuberto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body data-cursor="-hidden">
+    <section>
+      <audio id="playbgaudio">
+        <source src="https://ik.imagekit.io/carl/TEST/youtube_G-i8HYi1QH0_audio.mp3?updatedAt=1743445258193" type="audio/mpeg" />
+      </audio>
+      <audio id="playbgaudio2">
+        <source src="https://ik.imagekit.io/carl/TEST/youtube_n9GImjHkLmE_audio.mp3?updatedAt=1743445120862" type="audio/mpeg" />
+      </audio>
+      <nav>
+        <ul>
+          <li>
+            <a href="mailto:cnorwoodk@gmail.com" target="_blank" rel="noopener noreferrer">
+              <div class="icon">
+                <p>Email</p>
+                <img src="mail.svg" alt="Mail" aria-label="Mail" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/carlnorwoodk/" target="_blank" rel="noopener noreferrer">
+              <div class="icon">
+                <p>Instagram</p>
+                <img src="instagram.svg" alt="Instagram" aria-label="Instagram" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/carlnorwood12" target="_blank" rel="noopener noreferrer">
+              <div class="icon">
+                <p>Github</p>
+                <img src="github.svg" alt="Github" aria-label="Github" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="solacc.pdf" download>
+              <div class="icon">
+                <p>Certificate</p>
+                <img src="certificate.svg" alt="Qualifications" aria-label="Qualifications" />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <div class="left">
+        <div id="wrapper">
+          <div class="carl-image">
+            <img src="Exester_Sleeping.webp" width="80px" onclick="playAudio()" alt="" aria-label="" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="carlnorwood.svg" alt="" aria-label="" />
+        <p>
+          Wassup! I'm a web developer currently studying at <span data-cursor="-md" data-cursor-img="https://ik.imagekit.io/carl/TEST/8eb701c9d43a319b090a6abdc9ef8ff7.gif?updatedAt=1743426118819" onclick="location='https://www.edinburghcollege.ac.uk/'"><b>Edinburgh College</b></span>. 
+          I built this for fun — don’t take it too seriously. I'm passionate about creating <span data-cursor="-md" data-cursor-img="https://media4.giphy.com/media/Fgdv8hpZccHfv15ykO/giphy.gif?cid=6c09b952utzobhlqeicdmfsx3tgcir6bdt92mmtq1nzrjr0m&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"><b>creative solutions</b></span> to any project that comes my way.
+          <span class="charmander" onclick="playAudio2()">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </span>
+        </p>
+        <img id="grid" src="grid.svg" alt="" aria-label="" />
+      </div>
+    </section>
+    <section>
+      <div class="marquee-container">
+        <div class="content-wrapper-scrolling">
+          <p class="p-marquee">Web Developer</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+          <p class="p-marquee">Located in Edinburgh</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+          <p class="p-marquee">5+ Years Experience</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+        </div>
+        <div class="content-wrapper-scrolling">
+          <p class="p-marquee">Web Developer</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+          <p class="p-marquee">Located in Edinburgh</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+          <p class="p-marquee">5+ Years Experience</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+        </div>
+        <div class="content-wrapper-scrolling">
+          <p class="p-marquee">Web Developer</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+          <p class="p-marquee">Located in Edinburgh</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+          <p class="p-marquee">5+ Years Experience</p>
+          <img class="twinkle" src="asterisk.svg" alt="" aria-label="" />
+        </div>
+      </div>
+    </section>
+    <script src="mouse.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script>
+        var cursor = new MouseFollower();
+    </script>
+    <script src="gsap.js"></script>
+    <script src="video.js"></script>
+    <script>
+      document.body.addEventListener("mousemove", (e) => 
+      {
+        const wrapper = document.getElementById("wrapper");
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+        gsap.to(wrapper, 
+        {
+          duration: 1,
+          x: x * 30,
+          y: y * 30,
+        });
+      });
+    </script>
+  </body>
+</html>
