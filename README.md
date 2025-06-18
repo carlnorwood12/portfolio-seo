@@ -1,9 +1,5 @@
 # Outcome 3 & 4
 
-This README.md file outlines the architecture of this website, focusing on the structure of its homepage and commercial pages, as well as the copywriting principles applied for optimal readability and conversion.
-
----
-
 ## Website Architecture (Outcome 3)
 
 The website is structured into distinct, logical sections designed for clear navigation and effective communication.
