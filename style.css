@@ -137,13 +137,6 @@ header {
   border-image-source: linear-gradient(90deg, rgba(106, 141, 255, 0.2), transparent);
   background-color: transparent;
 }
-
-.mySwiper {
-  -webkit-transition-timing-function: linear !important;
-  -o-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-}
-
 .top::before {
   content: "";
   position: absolute;
@@ -358,30 +351,6 @@ video {
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 450px) {
-  .button-submit {
-    background-color: transparent;
-    padding: 0 !important;
-    width: 120px !important;
-  }
-
-  .swiper-slide .swiper-project-title {
-    bottom: 70px;
-    height: max-content;
-    left: 20px;
-  }
-
-  .swiper-slide a .button-submit {
-    bottom: 15px;
-    left: 15px;
-    right: auto;
-  }
-}
-@media (max-width: 800px) {
-  .availability-wrapper {
-    display: none;
-  }
-}
 
 /* Added for proper main content flow */
 main {
@@ -390,7 +359,6 @@ main {
   flex-direction: column;
   align-items: center; /* Center content horizontally */
   width: 100%; /* Ensure main takes full width */
-  padding: 0 20px; /* Add some horizontal padding */
 }
 section:not(.bottom)
 {
